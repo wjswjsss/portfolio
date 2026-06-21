@@ -1,0 +1,137 @@
+/* ============================================================
+   Portfolio content — EDIT THIS FILE to update your data.
+   No build step needed; just refresh the page.
+   ============================================================ */
+
+/* --- Publications --- */
+const PUBLICATIONS = [
+  {
+    title: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation",
+    authorsHtml: "X. Hu, <span class=\"me\">J. Wang</span>, Z. Shi, X. Zhang, L. Tan, J. Chen, M. Zhou",
+    venue: "GeoRisk, 2026"
+  },
+  {
+    title: "Turbo-TTS: Enhancing Diffusion Model TTS with an Improved ODE Solver",
+    authorsHtml: "X. Zhang&dagger;, <span class=\"me\">J. Wang&dagger;</span>, X. Qu, H. Tian, J. Wang*",
+    venue: "ICONIP 2025 <mark class=\"honor\">Spotlight</mark>"
+  },
+  {
+    title: "Enhancing Generalization in Video Deepfake Detection",
+    authorsHtml: "J. Li, N. Zhang, X. Qu, <span class=\"me\">J. Wang</span>, Y. Zhong*, J. Wan",
+    venue: "ICIC 2025 <mark class=\"honor\">Oral</mark>"
+  },
+  {
+    title: "YOLO-SRMX: A Lightweight Model for Real-Time Object Detection on UAVs",
+    authorsHtml: "S. Weng, H. Wang, <span class=\"me\">J. Wang</span>, C. Xu*, E. Zhang",
+    venue: "Remote Sensing, 2025"
+  }
+];
+
+/* --- Experience --- */
+/* Rendered as a git-style branch/merge graph.
+   `lane` is the column (0 = main line, 1 = branched line); array order is top -> bottom.
+   EXPERIENCE_EDGES lists parent -> child links. All roles are completed. */
+const EXPERIENCE = [
+  {
+    id: "A",
+    lane: 0,
+    role: "Research Intern",
+    org: "Ping An Technology, Shenzhen",
+    year: "2024-2025"
+  },
+  {
+    id: "B",
+    lane: 0,
+    role: "Research Assistant",
+    org: "Northeastern University, China",
+    year: "2025"
+  },
+  {
+    id: "C",
+    lane: 1,
+    role: "Research Assistant",
+    org: "Tsinghua University",
+    year: "2025"
+  },
+  {
+    id: "D",
+    lane: 0,
+    role: "Intern",
+    org: "XSpark AI",
+    year: "2026",
+    projects: [
+      { label: "XDemo", target: "XDemo" },
+      { label: "Synthetic Robotic Data Collection Application", target: "Synthetic Robotic Data Collection Application (Unity)" }
+    ]
+  }
+];
+
+const EXPERIENCE_EDGES = [
+  ["A", "B"],
+  ["A", "C"],
+  ["C", "D"],
+  ["B", "D"]
+];
+
+/* --- Projects ---
+   `tags` should be chosen from a small consistent vocabulary,
+   e.g. "Computer Vision", "Robotics", "Full-Stack", "Machine Learning".
+   `media` can be a .gif, .png, or .jpg in the assets/ folder. */
+const PROJECTS = [
+  {
+    title: "XDemo",
+    description:
+      "A voice-driven, task-level-safe (collision-free), desk-operating dual-arm system, currently running at the company reception as a live showcase. Developed at <a href='https://example.com' target='_blank' rel='noopener'>XSpark AI</a> (the company behind <a href='https://example.com' target='_blank' rel='noopener'>RoboTwin 2.0</a>), under the supervision of <a href='https://example.com' target='_blank' rel='noopener'>Tianxing Chen</a> (CTO)." +
+      "<ul class='project-points'>" +
+      "<li><mark>Sole full-stack</mark> developer — designed and implemented XDemo (Variant 1) end to end.</li>" +
+      "<li>Left clean skill-list interfaces in the prototype so my successor can integrate VLAs and evolve it into an embodied-agent benchmarking platform (Variant 2).</li>" +
+      "</ul>",
+
+    media: [
+      {
+        label: "Overall Architecture",
+        src: "images/xdemo_overall.png",
+        caption:
+          "*Marks a component still under active development. I concluded my internship in June 2026, and this part is being carried forward by my successor."
+      },
+      {
+        label: "Role",
+        src: "images/xdemo_role.png"
+      }
+    ],
+    gallery: [
+      "assets/projects/2026-05-09_144825_seg_21p356_27p870_sq320_001.gif",
+      "assets/projects/2026-05-09_144825_seg_30p393_42p696_sq320_002.gif",
+      "assets/projects/2026-05-09_165523_seg_10p554_18p833_sq320_003.gif",
+      "assets/projects/2026-05-09_171709_seg_27p110_57p853_sq320_004.gif",
+      "assets/projects/2026-05-11_145735_seg_27p866_47p473_sq320_005.gif",
+      "assets/projects/2026-05-11_150312_seg_23p987_34p436_sq320_006.gif"
+    ],
+    demoLink: "https://drive.google.com/",
+    tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack"]
+  },
+  {
+    title: "Synthetic Robotic Data Collection Application (Unity)",
+    description:
+      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. Built in collaboration with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a> and advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Mingyu Ding</a>." +
+      "<ul class='project-points'>" +
+      "<li><strong>Hardware:</strong> Two camera+IMU-enabled mobile devices connected within one local network.</li>" +
+      "<li><strong>Device A (scene phone):</strong> scans planes, places a Franka Panda 6-DoF arm and interactive assets, and controls episode start/stop/drop.</li>" +
+      "<li><strong>Device B (controller phone):</strong> streams IMU pose deltas at a fixed frame rate as [x, y, z, pitch, yaw, roll], drives IK solving, sets robot joint targets, and controls gripper open/close.</li>" +
+      "</ul>",
+    media: [
+      {
+        label: "Role",
+        src: "assets/projects/dataSyn/role.png"
+      },
+      {
+        type: "video",
+        label: "Demo Recording",
+        src: "assets/projects/dataSyn/demo.mp4",
+        caption:
+          "The swaying phone screen in the background is my controller device. I recorded this demo independently while holding one phone in each hand."
+      }
+    ],
+    tags: ["Robotics", "ML Engineering", "Full-stack"]
+  }
+];

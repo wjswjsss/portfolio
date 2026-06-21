@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../wjswjsss.github.io"
+		},
+		{
+			"path": "../../EmbodiedAI/grad"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "wjswjsss.github.io"
+	}
+}
