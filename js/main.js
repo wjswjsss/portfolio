@@ -43,7 +43,7 @@ function renderExperience() {
     const projects = (n.projects || [])
       .map(
         (p) =>
-          `<a class="exp-project" href="#projects" data-project="${p.target}">${p.label}</a>`
+          `<a class="exp-project" href="#projects" data-project="${p.target}">${p.label}<span class="exp-project-icon" aria-hidden="true">↗</span></a>`
       )
       .join("");
     return `
@@ -194,6 +194,16 @@ function renderProjectGrid() {
   );
 
   empty.hidden = filtered.length !== 0;
+
+  // Update result count
+  const countEl = document.getElementById("filter-count");
+  if (countEl) {
+    const total = PROJECTS.length;
+    countEl.textContent = activeTags.size
+      ? `${filtered.length} / ${total} project${total !== 1 ? "s" : ""}`
+      : "";
+    countEl.hidden = !activeTags.size;
+  }
 
   grid.innerHTML = filtered
     .map((p) => {

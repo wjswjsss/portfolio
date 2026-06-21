@@ -44,7 +44,10 @@ const EXPERIENCE = [
     lane: 0,
     role: "Research Assistant",
     org: "Northeastern University, China",
-    year: "2025"
+    year: "2025",
+    projects: [
+      { label: "SD-WLSNet", target: "SD-WLSNet: Extreme Small-Sample Tunnel Leakage Segmentation" }
+    ]
   },
   {
     id: "C",
@@ -92,7 +95,7 @@ const PROJECTS = [
         label: "Overview",
         src: "assets/projects/xdemo/overall.png",
         caption:
-          "*Marks a component still under active development. I concluded my internship in June 2026, and this part is being carried forward by my successor."
+          "In the Overview figure, '*' marks a component still under active development. I concluded my internship in June 2026, and this part is being carried forward by my successor."
       },
       {
         label: "Role",
@@ -107,13 +110,19 @@ const PROJECTS = [
       "assets/projects/xdemo/demo-005.gif",
       "assets/projects/xdemo/demo-006.gif"
     ],
-    demoLink: "https://drive.google.com/",
+    links: [
+      {
+        label: "Demo",
+        url: "#",
+        type: "demo"
+      }
+    ],
     tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack"]
   },
   {
     title: "Synthetic Robotic Data Collection Application (Unity)",
     description:
-      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. Built in collaboration with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a> and advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Mingyu Ding</a>." +
+      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole</mark> full-stack developer. Built in collaboration with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a> and advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
       "<ul class='project-points'>" +
       "<li><strong>Hardware:</strong> Two camera+IMU-enabled mobile devices connected within one local network.</li>" +
       "<li><strong>Device A (scene phone):</strong> scans planes, places a Franka Panda 6-DoF arm and interactive assets, and controls episode start/stop/drop.</li>" +
@@ -133,5 +142,37 @@ const PROJECTS = [
       }
     ],
     tags: ["Robotics", "Software Development", "VR", "Full-stack"]
+  },
+  {
+    title: "SD-WLSNet: Extreme Small-Sample Tunnel Leakage Segmentation",
+    description:
+      "Co-developed with <a href='#' target='_blank' rel='noopener'>Dr. Xiaoxi Hu</a>, advised by <a href='#' target='_blank' rel='noopener'>Academician and Professor Jiayao Chen</a>." +
+      "<ul class='project-points'>" +
+      "<li>Diffusion-augmented small-sample segmentation: first to apply Stable Diffusion-based inpainting to tunnel inspection data synthesis, enabling effective training with as few as <span class='metric'>10</span> labeled images.</li>" +
+      "<li>WLSNet integrates a Global Perception Module (GPM) for long-range context and Multi-Scale Attention Augmentation (MSAA) for boundary refinement, reducing false positives on thin, irregular leakage patterns.</li>" +
+      "<li>Best-in-class <span class='metric'>mIoU</span> for small-sample tunnel leakage: outperformed mainstream baselines in this domain, e.g., SegFormer-B0 by <span class='metric'>+4.65 pp mIoU</span>, and achieved a <span class='metric'>+3.94 pp mIoU</span> gain over the unaugmented WLSNet baseline with only <span class='metric'>10</span> training images (<span class='metric'>4x</span> augmentation ratio).</li>" +
+      "</ul>",
+    media: [
+      {
+        label: "Architecture",
+        src: "assets/projects/wlsnet/architecture.png"
+      },
+      {
+        label: "Framework",
+        src: "assets/projects/wlsnet/framework.png"
+      },
+      {
+        label: "Modules",
+        src: "assets/projects/wlsnet/modules.png"
+      }
+    ],
+    links: [
+      {
+        label: "Paper",
+        url: "#",
+        type: "paper"
+      }
+    ],
+    tags: ["Computer Vision", "Research"]
   }
 ];
