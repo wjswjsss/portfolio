@@ -89,23 +89,23 @@ const PROJECTS = [
 
     media: [
       {
-        label: "Overall Architecture",
-        src: "images/xdemo_overall.png",
+        label: "Overview",
+        src: "assets/projects/xdemo/overall.png",
         caption:
           "*Marks a component still under active development. I concluded my internship in June 2026, and this part is being carried forward by my successor."
       },
       {
         label: "Role",
-        src: "images/xdemo_role.png"
+        src: "assets/projects/xdemo/role.png"
       }
     ],
     gallery: [
-      "assets/projects/2026-05-09_144825_seg_21p356_27p870_sq320_001.gif",
-      "assets/projects/2026-05-09_144825_seg_30p393_42p696_sq320_002.gif",
-      "assets/projects/2026-05-09_165523_seg_10p554_18p833_sq320_003.gif",
-      "assets/projects/2026-05-09_171709_seg_27p110_57p853_sq320_004.gif",
-      "assets/projects/2026-05-11_145735_seg_27p866_47p473_sq320_005.gif",
-      "assets/projects/2026-05-11_150312_seg_23p987_34p436_sq320_006.gif"
+      "assets/projects/xdemo/demo-001.gif",
+      "assets/projects/xdemo/demo-002.gif",
+      "assets/projects/xdemo/demo-003.gif",
+      "assets/projects/xdemo/demo-004.gif",
+      "assets/projects/xdemo/demo-005.gif",
+      "assets/projects/xdemo/demo-006.gif"
     ],
     demoLink: "https://drive.google.com/",
     tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack"]
@@ -129,9 +129,9 @@ const PROJECTS = [
         label: "Demo Recording",
         src: "assets/projects/dataSyn/demo.mp4",
         caption:
-          "The swaying phone screen in the background is my controller device. I recorded this demo independently while holding one phone in each hand."
+          "The swaying phone screen in the background is my controller device. I recorded this demo independently while holding one phone in each hand. The ketchup bottle was knocked over by the robotic arm at the very beginning due to my operating error. As you can see, the scene includes a collision box, which makes asset-robot interaction possible in this virtual environment."
       }
     ],
-    tags: ["Robotics", "ML Engineering", "Full-stack"]
+    tags: ["Robotics", "Software Development", "VR", "Full-stack"]
   }
 ];
