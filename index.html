@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jiashu Wang · Portfolio</title>
   <meta name="description" content="Personal portfolio — publications, experience, and projects in computer vision and robotics." />
-  <link rel="stylesheet" href="css/styles.css?v=20260621j" />
+  <link rel="stylesheet" href="css/styles.css?v=20260621n" />
 </head>
 <body>
   <header class="site-header">
@@ -87,11 +87,15 @@
         <h2 class="section-title">Projects</h2>
       </div>
 
-      <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects by tag"></div>
-      <p class="filter-count" id="filter-count" hidden></p>
-
-      <div class="project-grid" id="project-grid"></div>
-      <p class="empty-state" id="empty-state" hidden>No projects match the selected tags.</p>
+      <div class="projects-layout">
+        <nav class="project-minimap" id="project-minimap" aria-label="Project navigation"></nav>
+        <div class="projects-main">
+          <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects by tag"></div>
+          <p class="filter-count" id="filter-count" hidden></p>
+          <div class="project-grid" id="project-grid"></div>
+          <p class="empty-state" id="empty-state" hidden>No projects match the selected tags.</p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -101,7 +105,7 @@
     </div>
   </footer>
 
-  <script src="js/data.js?v=20260621l"></script>
-  <script src="js/main.js?v=20260621l"></script>
+  <script src="js/data.js?v=20260621m"></script>
+  <script src="js/main.js?v=20260621o"></script>
 </body>
 </html>

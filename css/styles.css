@@ -282,9 +282,24 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Filter bar ---------- */
 .filter-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 26px;
+}
+.filter-tier {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-tier-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 .filter-chip {
   cursor: pointer;
@@ -309,6 +324,81 @@ a { color: inherit; text-decoration: none; }
   margin: 6px 0 0;
   font-size: 0.8rem;
   color: var(--text-faint);
+}
+
+/* ---------- Projects layout with minimap ---------- */
+.projects-layout {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+.projects-main {
+  flex: 1;
+  min-width: 0;
+}
+.project-minimap {
+  position: sticky;
+  top: 80px;
+  width: 160px;
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 20px;
+  border-right: 1px solid var(--border);
+  margin-right: 24px;
+}
+.minimap-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text-faint);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  transition: color 0.15s, background 0.15s;
+}
+.minimap-item:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.minimap-item.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+.minimap-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  border: 1.5px solid var(--text-faint);
+  transition: background 0.15s, border-color 0.15s;
+}
+.minimap-item.active .minimap-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.minimap-label {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@media (max-width: 720px) {
+  .projects-layout { flex-direction: column; }
+  .project-minimap {
+    position: static;
+    width: 100%;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0 0 12px;
+    margin: 0 0 16px;
+  }
 }
 
 /* ---------- Project grid ---------- */

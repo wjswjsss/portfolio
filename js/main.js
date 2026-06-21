@@ -146,6 +146,12 @@ function openProject(title) {
   });
 }
 
+/* Tag tier definitions — order determines display order within each group */
+const TAG_TIERS = [
+  { label: "Domain",    tags: ["Industry", "Research"] },
+  { label: "Technical", tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Software Development", "VR"] }
+];
+
 function allTags() {
   const set = new Set();
   PROJECTS.forEach((p) => p.tags.forEach((t) => set.add(t)));
@@ -159,16 +165,33 @@ function renderProjects() {
 
 function renderFilterBar() {
   const bar = document.getElementById("filter-bar");
-  const chips = allTags()
-    .map(
-      (t) =>
-        `<button class="filter-chip${activeTags.has(t) ? " active" : ""}" data-tag="${t}">${t}</button>`
-    )
-    .join("");
-  const clear = `<button class="filter-chip clear" data-clear="true"${
-    activeTags.size ? "" : " hidden"
-  }>Clear ✕</button>`;
-  bar.innerHTML = chips + clear;
+  const usedTags = new Set();
+  PROJECTS.forEach((p) => p.tags.forEach((t) => usedTags.add(t)));
+
+  let html = "";
+  TAG_TIERS.forEach((tier) => {
+    const tierTags = tier.tags.filter((t) => usedTags.has(t));
+    if (!tierTags.length) return;
+    html += `<div class="filter-tier">`;
+    html += `<span class="filter-tier-label">${tier.label}</span>`;
+    tierTags.forEach((t) => {
+      html += `<button class="filter-chip${activeTags.has(t) ? " active" : ""}" data-tag="${t}">${t}</button>`;
+    });
+    html += `</div>`;
+  });
+
+  // Any tags not assigned to a tier go to an ungrouped row
+  const ungrouped = [...usedTags].filter((t) => !TAG_TIERS.some((tier) => tier.tags.includes(t))).sort();
+  if (ungrouped.length) {
+    html += `<div class="filter-tier">`;
+    ungrouped.forEach((t) => {
+      html += `<button class="filter-chip${activeTags.has(t) ? " active" : ""}" data-tag="${t}">${t}</button>`;
+    });
+    html += `</div>`;
+  }
+
+  html += `<button class="filter-chip clear" data-clear="true"${activeTags.size ? "" : " hidden"}>Clear ✕</button>`;
+  bar.innerHTML = html;
 
   bar.querySelectorAll(".filter-chip").forEach((chip) => {
     chip.addEventListener("click", () => {

@@ -46,7 +46,7 @@ const EXPERIENCE = [
     org: "Northeastern University, China",
     year: "2025",
     projects: [
-      { label: "SD-WLSNet", target: "SD-WLSNet: Extreme Small-Sample Tunnel Leakage Segmentation" }
+      { label: "SD-WLSNet", target: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation in Metro Tunnel Linings" }
     ]
   },
   {
@@ -84,7 +84,7 @@ const PROJECTS = [
   {
     title: "XDemo",
     description:
-      "A voice-driven, task-level-safe (collision-free), desk-operating dual-arm system, currently running at the company reception as a live showcase. Developed at <a href='https://example.com' target='_blank' rel='noopener'>XSpark AI</a> (the company behind <a href='https://example.com' target='_blank' rel='noopener'>RoboTwin 2.0</a>), under the supervision of <a href='https://example.com' target='_blank' rel='noopener'>Tianxing Chen</a> (CTO)." +
+      "A voice-driven, task-level-safe (collision-free), desk-operating dual-arm hierarchical system (high-level planner &amp; executor), currently running at the company reception as a live showcase. Developed at <a href='https://example.com' target='_blank' rel='noopener'>XSpark AI</a> (the company behind <a href='https://example.com' target='_blank' rel='noopener'>RoboTwin 2.0</a>), under the supervision of <a href='https://example.com' target='_blank' rel='noopener'>Tianxing Chen</a> (CTO)." +
       "<ul class='project-points'>" +
       "<li><mark>Sole full-stack</mark> developer — designed and implemented XDemo (Variant 1) end to end.</li>" +
       "<li>Left clean skill-list interfaces in the prototype so my successor can integrate VLAs and evolve it into an embodied-agent benchmarking platform (Variant 2).</li>" +
@@ -95,7 +95,7 @@ const PROJECTS = [
         label: "Overview",
         src: "assets/projects/xdemo/overall.png",
         caption:
-          "In the Overview figure, '*' marks a component still under active development. I concluded my internship in June 2026, and this part is being carried forward by my successor."
+          "In the Overview figure, * marks a component still under active development. I concluded my internship in June 2026, and this part is being carried forward by my successor."
       },
       {
         label: "Role",
@@ -117,12 +117,12 @@ const PROJECTS = [
         type: "demo"
       }
     ],
-    tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack"]
+    tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Industry"]
   },
   {
     title: "Synthetic Robotic Data Collection Application (Unity)",
     description:
-      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole</mark> full-stack developer. Built in collaboration with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a> and advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
+      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole full-stack</mark> developer. Built in collaboration with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a> and advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
       "<ul class='project-points'>" +
       "<li><strong>Hardware:</strong> Two camera+IMU-enabled mobile devices connected within one local network.</li>" +
       "<li><strong>Device A (scene phone):</strong> scans planes, places a Franka Panda 6-DoF arm and interactive assets, and controls episode start/stop/drop.</li>" +
@@ -141,10 +141,10 @@ const PROJECTS = [
           "The swaying phone screen in the background is my controller device. I recorded this demo independently while holding one phone in each hand. The ketchup bottle was knocked over by the robotic arm at the very beginning due to my operating error. As you can see, the scene includes a collision box, which makes asset-robot interaction possible in this virtual environment."
       }
     ],
-    tags: ["Robotics", "Software Development", "VR", "Full-stack"]
+    tags: ["Robotics", "Software Development", "VR", "Full-stack", "Industry"]
   },
   {
-    title: "SD-WLSNet: Extreme Small-Sample Tunnel Leakage Segmentation",
+    title: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation in Metro Tunnel Linings",
     description:
       "Co-developed with <a href='#' target='_blank' rel='noopener'>Dr. Xiaoxi Hu</a>, advised by <a href='#' target='_blank' rel='noopener'>Academician and Professor Jiayao Chen</a>." +
       "<ul class='project-points'>" +
