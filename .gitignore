@@ -13,6 +13,9 @@ Thumbs.db
 node_modules/
 dist/
 
+# Local backups
+backup/
+
 # Always keep portfolio images trackable
 !images/
 !images/**
