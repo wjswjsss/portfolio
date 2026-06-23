@@ -240,7 +240,21 @@ function renderProjectGrid() {
 
       // Unify figures + demo gifs into one thumbnail strip.
       const mediaItems = Array.isArray(p.media) ? p.media : p.media ? [{ src: p.media }] : [];
-      const galleryItems = (p.gallery || []).map((src, i) => ({ src, label: `Clip ${i + 1}` }));
+      const galleryItems = (p.gallery || []).map((item, i) => {
+        if (typeof item === "string") {
+          return {
+            src: item,
+            label: `Clip ${i + 1}`,
+            type: /\.(mp4|webm|mov|m4v)(\?|$)/i.test(item) ? "video" : "image"
+          };
+        }
+        const src = item.src || "";
+        return {
+          src,
+          label: item.label || `Clip ${i + 1}`,
+          type: item.type || (/\.(mp4|webm|mov|m4v)(\?|$)/i.test(src) ? "video" : "image")
+        };
+      });
       const allMedia = [...mediaItems, ...galleryItems];
 
       const thumbs = allMedia

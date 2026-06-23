@@ -110,12 +110,12 @@ const PROJECTS = [
       }
     ],
     gallery: [
-      "assets/projects/xdemo/demo-001.gif",
-      "assets/projects/xdemo/demo-002.gif",
-      "assets/projects/xdemo/demo-003.gif",
-      "assets/projects/xdemo/demo-004.gif",
-      "assets/projects/xdemo/demo-005.gif",
-      "assets/projects/xdemo/demo-006.gif"
+      "assets/projects/xdemo/demo-001.mp4",
+      "assets/projects/xdemo/demo-002.mp4",
+      "assets/projects/xdemo/demo-003.mp4",
+      "assets/projects/xdemo/demo-004.mp4",
+      "assets/projects/xdemo/demo-005.mp4",
+      "assets/projects/xdemo/demo-006.mp4"
     ],
     links: [
       {
