@@ -149,7 +149,7 @@ function openProject(title) {
 /* Tag tier definitions — order determines display order within each group */
 const TAG_TIERS = [
   { label: "Domain",    tags: ["Industry", "Research"] },
-  { label: "Technical", tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Software Development", "VR"] }
+  { label: "Technical", tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Software Development", "VR", "Traditional ML"] }
 ];
 
 function allTags() {

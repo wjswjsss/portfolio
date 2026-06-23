@@ -46,7 +46,7 @@ const EXPERIENCE = [
     org: "Northeastern University, China",
     year: "2025",
     projects: [
-      { label: "SD-WLSNet", target: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation in Metro Tunnel Linings" }
+      { label: "Fast Region Merging Algorithm", target: "Improved Region Merging Algorithm for 3D Point Cloud Semantic Segmentation" }
     ]
   },
   {
@@ -54,7 +54,10 @@ const EXPERIENCE = [
     lane: 1,
     role: "Research Assistant",
     org: "Tsinghua University",
-    year: "2025"
+    year: "2025",
+    projects: [
+      { label: "WLSNet", target: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation in Metro Tunnel Linings" }
+    ]
   },
   {
     id: "D",
@@ -64,7 +67,7 @@ const EXPERIENCE = [
     year: "2026",
     projects: [
       { label: "XDemo", target: "XDemo" },
-      { label: "Synthetic Robotic Data Collection Application", target: "Synthetic Robotic Data Collection Application (Unity)" }
+      { label: "Data Synthesis Application, Unity", target: "Data Synthesis Application, Unity" }
     ]
   }
 ];
@@ -120,9 +123,9 @@ const PROJECTS = [
     tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Industry"]
   },
   {
-    title: "Synthetic Robotic Data Collection Application (Unity)",
+    title: "Data Synthesis Application, Unity",
     description:
-      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole full-stack</mark> developer. Built in collaboration with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a> and advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
+      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole software engineer</mark> — implemented all coding and architecture; assets created collaboratively with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a>. Advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
       "<ul class='project-points'>" +
       "<li><strong>Hardware:</strong> Two camera+IMU-enabled mobile devices connected within one local network.</li>" +
       "<li><strong>Device A (scene phone):</strong> scans planes, places a Franka Panda 6-DoF arm and interactive assets, and controls episode start/stop/drop.</li>" +
@@ -174,5 +177,53 @@ const PROJECTS = [
       }
     ],
     tags: ["Computer Vision", "Research"]
+  },
+  {
+    title: "YOLO-SRMX: A Lightweight Model for Real-Time Object Detection on Unmanned Aerial Vehicles",
+    description:
+      "Contributed to <em>Remote Sensing</em> publication (2025) — produced all figures and conducted technical English editing.",
+    media: [
+      {
+        label: "Improved YOLOv8",
+        src: "assets/projects/yolo-srmx/improved_yolov8.png"
+      },
+      {
+        label: "ConvX",
+        src: "assets/projects/yolo-srmx/convx.png"
+      },
+      {
+        label: "DRFAConvP",
+        src: "assets/projects/yolo-srmx/drfaConvP.png"
+      },
+      {
+        label: "MConv",
+        src: "assets/projects/yolo-srmx/mconv.png"
+      },
+      {
+        label: "MSDA",
+        src: "assets/projects/yolo-srmx/msda.png"
+      }
+    ],
+    links: [
+      {
+        label: "Paper",
+        url: "https://www.mdpi.com/2072-4292/17/13/2313",
+        type: "paper"
+      }
+    ],
+    tags: ["Computer Vision", "Research"]
+  },
+  {
+    title: "Improved Region Merging Algorithm for 3D Point Cloud Semantic Segmentation",
+    description:
+      "Accelerating traditional region merging for large-scale 3D point cloud semantic segmentation. Advised by <a href='#' target='_blank' rel='noopener'>Dr. Xianwei Lv</a>." +
+      "<ul class='project-points'>" +
+      "<li>Co-developed and implemented several acceleration strategies for region merging, achieving significant speedup over baseline approaches.</li>" +
+      "<li>Reproduced 6 region growing baselines (e.g., octree-based region growing by Vo et al.) for rigorous performance comparison.</li>" +
+      "<li>Transitioned to successor for final implementation and experimental validation.</li>" +
+      "</ul>",
+    media: [],
+    links: [],
+    tags: ["Traditional ML", "Computer Vision"]
   }
 ];
