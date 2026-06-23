@@ -37,7 +37,11 @@ const EXPERIENCE = [
     lane: 0,
     role: "Research Intern",
     org: "Ping An Technology, Shenzhen",
-    year: "2024-2025"
+    year: "2024-2025",
+    projects: [
+      { label: "Turbo-TTS", target: "Turbo-TTS: Enhancing Diffusion Model TTS with an Improved ODE Solver" },
+      { label: "Deepfake", target: "Enhancing Generalization in Video Deepfake Detection via Ambiguous Data Generation" }
+    ]
   },
   {
     id: "B",
@@ -224,6 +228,52 @@ const PROJECTS = [
       "</ul>",
     media: [],
     links: [],
-    tags: ["Traditional ML", "Computer Vision"]
+    tags: ["Traditional ML", "Computer Vision", "Research"]
+  },
+  {
+    title: "Enhancing Generalization in Video Deepfake Detection via Ambiguous Data Generation",
+    description:
+      "Contributed to code implementation and experimental validation for video deepfake detection using ambiguous data generation.",
+    media: [
+      {
+        label: "Overview",
+        src: "assets/projects/deepfake/overview.webp"
+      },
+      {
+        label: "Proposed Method",
+        src: "assets/projects/deepfake/proposed.webp"
+      }
+    ],
+    links: [
+      {
+        label: "Paper",
+        url: "https://link.springer.com/chapter/10.1007/978-981-96-9949-0_23",
+        type: "paper"
+      }
+    ],
+    tags: ["Computer Vision", "Research"]
+  },
+  {
+    title: "Turbo-TTS: Enhancing Diffusion Model TTS with an Improved ODE Solver",
+    description:
+      "Contributed to code implementation and experimental validation for a diffusion-based text-to-speech system with improved ODE solver efficiency.",
+    media: [
+      {
+        label: "Overview",
+        src: "assets/projects/turbo-tts/overview.webp"
+      },
+      {
+        label: "Proposed Method",
+        src: "assets/projects/turbo-tts/algo.png"
+      }
+    ],
+    links: [
+      {
+        label: "Paper",
+        url: "https://link.springer.com/chapter/10.1007/978-981-95-4367-0_7",
+        type: "paper"
+      }
+    ],
+    tags: ["Speech Synthesis", "Research"]
   }
 ];
