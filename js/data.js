@@ -87,7 +87,7 @@ const PROJECTS = [
   {
     title: "XDemo",
     description:
-      "A voice-driven, task-level-safe (collision-free), desk-operating dual-arm hierarchical system (high-level planner &amp; executor), currently running at the company reception as a live showcase. Developed at <a href='https://example.com' target='_blank' rel='noopener'>XSpark AI</a> (the company behind <a href='https://example.com' target='_blank' rel='noopener'>RoboTwin 2.0</a>), under the supervision of <a href='https://example.com' target='_blank' rel='noopener'>Tianxing Chen</a> (CTO)." +
+      "A voice-driven, task-level-safe (collision-free), desk-operating dual-arm hierarchical system (high-level planner &amp; executor), currently running at the company reception as a live showcase. Developed at <strong>XSpark AI</strong> (the company behind <a href='https://robotwin-platform.github.io/' target='_blank' rel='noopener'>RoboTwin 2.0</a>), under the supervision of <a href='https://tianxingchen.github.io/' target='_blank' rel='noopener'>Tianxing Chen</a> (CTO)." +
       "<ul class='project-points'>" +
       "<li><mark>Sole full-stack</mark> developer — designed and implemented XDemo (Variant 1) end to end.</li>" +
       "<li>Left clean skill-list interfaces in the prototype so my successor can integrate VLAs and evolve it into an embodied-agent benchmarking platform (Variant 2).</li>" +
@@ -125,7 +125,7 @@ const PROJECTS = [
   {
     title: "Data Synthesis Application, Unity",
     description:
-      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole software engineer</mark> — implemented all coding and architecture; assets created collaboratively with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a>. Advised by <a href='https://scholar.google.com/scholar?q=Mingyu+Ding' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
+      "A Unity-based application for generating synthetic robotic data using two consumer iOS phones on the same LAN. <mark>Sole software engineer</mark> — implemented all coding and architecture; assets created collaboratively with <a href='https://10-oasis-01.github.io/' target='_blank' rel='noopener'>Yibin Liu</a>. Advised by <a href='https://dingmyu.github.io/' target='_blank' rel='noopener'>Assistant Professor Mingyu Ding</a>." +
       "<ul class='project-points'>" +
       "<li><strong>Hardware:</strong> Two camera+IMU-enabled mobile devices connected within one local network.</li>" +
       "<li><strong>Device A (scene phone):</strong> scans planes, places a Franka Panda 6-DoF arm and interactive assets, and controls episode start/stop/drop.</li>" +
@@ -149,7 +149,7 @@ const PROJECTS = [
   {
     title: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation in Metro Tunnel Linings",
     description:
-      "Co-developed with <a href='#' target='_blank' rel='noopener'>Dr. Xiaoxi Hu</a>, advised by <a href='#' target='_blank' rel='noopener'>Academician and Professor Jiayao Chen</a>." +
+      "Co-developed with <a href='https://scholar.google.com/citations?user=ZkIkXLAAAAAJ&hl=zh-CN&oi=ao' target='_blank' rel='noopener'>Dr. Xiaoxi Hu</a>, co-advised by <a href='https://scholar.google.com/citations?user=oA80mQwAAAAJ&hl=en' target='_blank' rel='noopener'>Prof. Hongwei Huang</a> &amp; <a href='https://scholar.google.com/citations?hl=zh-CN&user=7XVKAZMAAAAJ' target='_blank' rel='noopener'>Assoc. Prof. Jiayao Chen</a>." +
       "<ul class='project-points'>" +
       "<li>Diffusion-augmented small-sample segmentation: first to apply Stable Diffusion-based inpainting to tunnel inspection data synthesis, enabling effective training with as few as <span class='metric'>10</span> labeled images.</li>" +
       "<li>WLSNet integrates a Global Perception Module (GPM) for long-range context and Multi-Scale Attention Augmentation (MSAA) for boundary refinement, reducing false positives on thin, irregular leakage patterns.</li>" +
@@ -216,7 +216,7 @@ const PROJECTS = [
   {
     title: "Improved Region Merging Algorithm for 3D Point Cloud Semantic Segmentation",
     description:
-      "Accelerating traditional region merging for large-scale 3D point cloud semantic segmentation. Advised by <a href='#' target='_blank' rel='noopener'>Dr. Xianwei Lv</a>." +
+      "Accelerating traditional region merging for large-scale 3D point cloud semantic segmentation. Advised by <a href='https://scholar.google.com/citations?user=pXVN3ZMAAAAJ&hl=zh-CN&oi=ao' target='_blank' rel='noopener'>Dr. Xianwei Lv</a>." +
       "<ul class='project-points'>" +
       "<li>Co-developed and implemented several acceleration strategies for region merging, achieving significant speedup over baseline approaches.</li>" +
       "<li>Reproduced 6 region growing baselines (e.g., octree-based region growing by Vo et al.) for rigorous performance comparison.</li>" +
