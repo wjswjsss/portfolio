@@ -116,7 +116,7 @@ const PROJECTS = [
     links: [
       {
         label: "Demo",
-        url: "#",
+        url: "https://drive.google.com/drive/folders/1LrONYIjx-NNDZQuN-eqzjYtsVPp92b11?usp=sharing",
         type: "demo"
       }
     ],
@@ -149,7 +149,7 @@ const PROJECTS = [
   {
     title: "SD-WLSNet: Diffusion-Augmented Small-Sample Water Leakage Segmentation in Metro Tunnel Linings",
     description:
-      "Co-developed with <a href='https://scholar.google.com/citations?user=ZkIkXLAAAAAJ&hl=zh-CN&oi=ao' target='_blank' rel='noopener'>Dr. Xiaoxi Hu</a>, co-advised by <a href='https://scholar.google.com/citations?user=oA80mQwAAAAJ&hl=en' target='_blank' rel='noopener'>Prof. Hongwei Huang</a> &amp; <a href='https://scholar.google.com/citations?hl=zh-CN&user=7XVKAZMAAAAJ' target='_blank' rel='noopener'>Assoc. Prof. Jiayao Chen</a>." +
+      "Co-developed with <a href='https://scholar.google.com/citations?user=ZkIkXLAAAAAJ&hl=zh-CN&oi=ao' target='_blank' rel='noopener'>Dr. Xiaoxi Hu</a>, co-advised by <a href='https://scholar.google.com/citations?user=oA80mQwAAAAJ&hl=en' target='_blank' rel='noopener'>Prof. Hongwei Huang</a> &amp; <a href='https://scholar.google.com/citations?hl=zh-CN&user=7XVKAZMAAAAJ' target='_blank' rel='noopener'>Assoc. Prof. Jiayao Chen</a>. <mark><strong>I completed all coding, experiments, and paper writing.</strong></mark>" +
       "<ul class='project-points'>" +
       "<li>Diffusion-augmented small-sample segmentation: first to apply Stable Diffusion-based inpainting to tunnel inspection data synthesis, enabling effective training with as few as <span class='metric'>10</span> labeled images.</li>" +
       "<li>WLSNet integrates a Global Perception Module (GPM) for long-range context and Multi-Scale Attention Augmentation (MSAA) for boundary refinement, reducing false positives on thin, irregular leakage patterns.</li>" +
@@ -219,7 +219,7 @@ const PROJECTS = [
       "Accelerating traditional region merging for large-scale 3D point cloud semantic segmentation. Advised by <a href='https://scholar.google.com/citations?user=pXVN3ZMAAAAJ&hl=zh-CN&oi=ao' target='_blank' rel='noopener'>Dr. Xianwei Lv</a>." +
       "<ul class='project-points'>" +
       "<li>Co-developed and implemented several acceleration strategies for region merging, achieving significant speedup over baseline approaches.</li>" +
-      "<li>Reproduced 6 region growing baselines (e.g., octree-based region growing by Vo et al.) for rigorous performance comparison.</li>" +
+      "<li><mark><strong>Reproduced 6 region growing baselines</strong></mark> (e.g., octree-based region growing by Vo et al.) for rigorous performance comparison.</li>" +
       "<li>Transitioned to successor for final implementation and experimental validation.</li>" +
       "</ul>",
     media: [],
