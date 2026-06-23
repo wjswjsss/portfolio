@@ -261,7 +261,7 @@ function renderProjectGrid() {
         .map((m, i) => {
           const label = m.label || `View ${i + 1}`;
           const preview = m.type === "video"
-            ? `<video src="${m.src}" muted loop playsinline preload="metadata"></video>`
+            ? `<video src="${m.src}" autoplay muted loop playsinline preload="metadata"></video>`
             : `<img src="${m.src}" alt="${p.title} — ${label}" loading="lazy" onerror="this.closest('.media-thumb').remove()">`;
           return `
             <a class="media-thumb" href="${m.src}" target="_blank" rel="noopener" title="${label} — open full size">
@@ -306,7 +306,24 @@ function renderProjectGrid() {
     });
   });
 
+  if (document.getElementById("projects")?.classList.contains("is-active")) {
+    setProjectPreviewPlayback(true);
+  }
+
   renderMinimap(filtered);
+}
+
+function setProjectPreviewPlayback(shouldPlay) {
+  document.querySelectorAll("#projects .project-media-strip video").forEach((video) => {
+    if (shouldPlay) {
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+      }
+      return;
+    }
+    video.pause();
+  });
 }
 
 /* Floating minimap on the left — quick locate / jump between project cards. */
@@ -381,6 +398,8 @@ function showSection(name) {
   if (name === "experience") {
     renderExperience();
   }
+
+  setProjectPreviewPlayback(name === "projects");
 
   document.querySelectorAll(".nav-link").forEach((l) => {
     l.classList.toggle("active", l.dataset.section === name);
