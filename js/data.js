@@ -124,7 +124,7 @@ const PROJECTS = [
         type: "demo"
       }
     ],
-    tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Industry"]
+    tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Industry", "Agentic AI"]
   },
   {
     title: "Data Synthesis Application, Unity",

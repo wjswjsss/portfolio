@@ -8,12 +8,41 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   setupNavigation();
   setupMobileNav();
+  setupCvInProgressHint();
   document.getElementById("year").textContent = new Date().getFullYear();
 
   // Show the section referenced in the URL hash (if any), else "home".
   const initial = (location.hash || "#home").replace("#", "");
   showSection(document.querySelector(`[data-section="${initial}"]`) ? initial : "home");
 });
+
+function setupCvInProgressHint() {
+  const cvBtn = document.getElementById("download-cv-btn");
+  const tip = document.getElementById("cv-status-tooltip");
+  if (!cvBtn || !tip) return;
+
+  let hideTimer;
+  cvBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const x = event.clientX || cvBtn.getBoundingClientRect().left + cvBtn.offsetWidth / 2;
+    const y = event.clientY || cvBtn.getBoundingClientRect().top;
+
+    clearTimeout(hideTimer);
+    tip.hidden = false;
+    tip.classList.remove("is-visible");
+    tip.style.left = `${x + 12}px`;
+    tip.style.top = `${y + 14}px`;
+    requestAnimationFrame(() => tip.classList.add("is-visible"));
+
+    hideTimer = setTimeout(() => {
+      tip.classList.remove("is-visible");
+      setTimeout(() => {
+        if (!tip.classList.contains("is-visible")) tip.hidden = true;
+      }, 180);
+    }, 1800);
+  });
+}
 
 /* ---------- Rendering ---------- */
 function renderPublications() {
@@ -149,7 +178,7 @@ function openProject(title) {
 /* Tag tier definitions — order determines display order within each group */
 const TAG_TIERS = [
   { label: "Domain",    tags: ["Industry", "Research"] },
-  { label: "Technical", tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Software Development", "VR", "Traditional ML", "Speech Synthesis"] }
+  { label: "Technical", tags: ["Robotics", "Computer Vision", "ML Engineering", "Full-stack", "Software Development", "VR", "Traditional ML", "Speech Synthesis", "Agentic AI"] }
 ];
 
 function allTags() {

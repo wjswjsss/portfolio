@@ -119,6 +119,14 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 40px 0 16px; max-width: 680px; }
+.hero-pronunciation {
+  margin: 0 0 4px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -135,9 +143,52 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-tagline { font-size: 1.25rem; margin: 0 0 16px; color: var(--text); }
 .hero-bio { font-size: 1.02rem; color: var(--text-soft); margin: 0 0 28px; }
+.hero-bio .hero-highlight {
+  font-weight: 700;
+  color: var(--text);
+  padding: 0 2px;
+  border-radius: 2px;
+  background: linear-gradient(transparent 58%, rgba(255, 226, 102, 0.9) 58%);
+}
+
+.hero-privacy-note {
+  display: inline-flex;
+  margin: -10px 0 20px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #0f5132;
+  background: #e8f7ef;
+  border: 1px solid #bfe8d0;
+}
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .icon-links { display: inline-flex; gap: 10px; }
+
+.cursor-tooltip {
+  position: fixed;
+  z-index: 120;
+  max-width: min(280px, calc(100vw - 20px));
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(27, 31, 36, 0.95);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+}
+
+.cursor-tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .icon-link {
   width: 44px;
@@ -740,6 +791,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
+  .hero-privacy-note {
+    display: block;
+    width: fit-content;
+    margin-top: -4px;
+  }
   .media-thumb {
     width: 118px;
     min-width: 118px;

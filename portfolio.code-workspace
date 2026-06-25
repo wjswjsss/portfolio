@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../../EmbodiedAI/grad"
+		},
+		{
+			"path": "../CV"
 		}
 	],
 	"settings": {
